@@ -47,4 +47,8 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
+    public List<Produto> buscarProdutosPorIntervaloPreco(Double precoMinimo, Double precoMaximo) {
+        return produtoRepository.buscarProdutosPorIntervaloPreco(precoMinimo, precoMaximo);
+    }
+
 }

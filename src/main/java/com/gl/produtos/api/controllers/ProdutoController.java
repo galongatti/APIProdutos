@@ -65,6 +65,15 @@ public class ProdutoController {
         }
     }
 
+    @GetMapping("/buscar-produto-por-intervalo-preco")
+    public List<Produto> BuscarProdutoPorIntervaloPreco(@RequestParam Double precoMinimo, @RequestParam Double precoMaximo) {
+        try {
+            return produtoService.buscarProdutosPorIntervaloPreco(precoMinimo, precoMaximo);
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao buscar produtos por intervalo de preço: " + e.getMessage());
+        }
+    }
+
 
 
 
