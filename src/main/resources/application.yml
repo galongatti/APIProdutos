@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/produtos
+        username: postgres
+        password: 123
+    application:
+        name: produtos.api
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: none
+        database:
+            platform: org.hibernate.dialect.PostgreSQLDialect
